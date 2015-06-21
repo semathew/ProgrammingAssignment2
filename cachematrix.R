@@ -36,9 +36,9 @@ m <- x$getInverse()
         message("getting cached data")
         return(m)
     }
-# If no cached value , cacluate Inverse
+# If no cached value , get matrix and cacluate Inverse
     data <- x$get()  # Get the matrix
     m <- solve(data) # Get the Inverse
-    x$setInverse(m)  # cache calculated inverse 
+    x$setInverse(m)  # cache calculated inverse
     return(m) # Return matrix
 }
