@@ -3,9 +3,6 @@
 # This consists of 2 functions
 # "makeCacheMatrix" :
 ## This function creates a "matrix" object that can cache its inverse.
-# "cacheSolve" :
-##It computes the inverse of the "matrix" returned by makeCacheMatrix
-## above. if already capured , value is retreived from cache
 #
 # 1.Set the initial matrix
 makeCacheMatrix <- function(x = matrix())
@@ -27,6 +24,9 @@ makeCacheMatrix <- function(x = matrix())
     setInverse = setInverse,
     getInverse = getInverse)
 }
+# "cachesolve" :
+##It computes the inverse of the "matrix" returned by makeCacheMatrix
+## above. if already capured , value is retreived from cache for m
 cachesolve <- function(x)
 {
 # Gets cached value, if available and return the value
